@@ -5,6 +5,7 @@
   "main": "dist/vue-dato-image.ssr.js",
   "module": "dist/vue-dato-image.esm.js",
   "unpkg": "dist/vue-dato-image.min.js",
+  "author": "De Voorhoede (https://voorhoede.nl/)",
   "licence": "MIT",
   "files": [
     "dist/*",
