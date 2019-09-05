@@ -5,8 +5,8 @@ workflow "Build, Test, and Publish" {
 
 # Filter for a new tag
 action "Tag" {
-  needs = "Test"
   uses = "actions/bin/filter@master"
+  args = "tag"
 }
 
 action "Test" {
