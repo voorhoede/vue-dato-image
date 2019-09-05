@@ -39,9 +39,9 @@
 </template>
 
 <script>
-import FixedRatio from './fixed-ratio'
-import LazyLoad from './lazy-load'
-import NoScript from './no-script'
+import FixedRatio from './fixed-ratio.vue'
+import LazyLoad from './lazy-load.vue'
+import NoScript from './no-script.vue'
 import imageUrl from './lib/image-url'
 
 export default {
