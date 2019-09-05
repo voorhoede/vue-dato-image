@@ -1,3 +1,5 @@
+on: tags
+
 steps:
 - uses: actions/checkout@master
 - uses: actions/setup-node@v1
