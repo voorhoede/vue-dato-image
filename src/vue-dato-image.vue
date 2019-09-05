@@ -67,7 +67,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.image)
     const pixelRatio = window.devicePixelRatio || 1
     const cssWidth = this.$el.getBoundingClientRect().width
     const width = Math.ceil(cssWidth * pixelRatio / this.widthStep) * this.widthStep
