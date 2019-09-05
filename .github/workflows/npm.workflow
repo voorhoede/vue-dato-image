@@ -15,10 +15,16 @@ action "Test" {
   args = "test"
 }
 
-action "Build" {
+action "Install dependencies" {
   needs = "Test"
   uses = "actions/npm@master"
   args = "install"
+}
+
+action "Build" {
+  needs = "Install dependencies"
+  uses = "actions/npm@master"
+  args = "run build"
 }
 
 action "Publish" {
