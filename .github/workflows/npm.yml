@@ -2,24 +2,27 @@ on:
   push:
     tags: v*.*.*
 
-steps:
-- uses: actions/checkout@master
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
 
-- uses: actions/setup-node@v1
-  with:
-    node-version: '10.x'
-    registry-url: 'https://registry.npmjs.org'
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+        registry-url: 'https://registry.npmjs.org'
 
-- name: Install npm dependencies
-  run: npm install
+    - name: Install npm dependencies
+      run: npm install
 
-- name: Test and build package
-  run: |
-    npm test
-    npm run build
+    - name: Test and build package
+      run: |
+        npm test
+        npm run build
 
-- name: Publish tag to npm
-  if: contains(github.ref, 'tags')
-  run: npm publish
-  env:
-    NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+    - name: Publish tag to npm
+      if: contains(github.ref, 'tags')
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
