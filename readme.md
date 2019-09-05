@@ -1,3 +1,3 @@
 # Vue Dato Image
 
-See [docs](asdf) for more information.
+See [docs](https://vue-dato-image.netlify.com) for more information.
