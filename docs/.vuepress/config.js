@@ -13,7 +13,15 @@ module.exports = {
             componentsDir: `${__dirname}/../../src/`
         }],
         ['demo-code', {
-            onlineBtns: { codepen: false, jsfiddle: false, codesandbox: false },
+            jsLibs: [
+                // vue.js is automatically inserted by the plugin
+                `https://unpkg.com/${pkg.name}@${pkg.version}/${pkg.unpkg}`
+            ],
+            onlineBtns: {
+                codepen: true,
+                jsfiddle: true,
+                codesandbox: true
+            },
         }]
     ]
 }
