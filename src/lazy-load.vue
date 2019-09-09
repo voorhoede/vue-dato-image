@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="lazy-load">
     <slot v-if="isIntersected" />
     <slot v-if="isIntersected" name="content" />
     <slot v-if="!isIntersected" name="placeholder" />
@@ -55,3 +55,10 @@ export default {
   },
 }
 </script>
+
+<style>
+.lazy-load {
+  min-width: 1px;
+  min-height: 1px;
+}
+</style>
