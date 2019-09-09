@@ -21,6 +21,28 @@
 npm install vue-dato-image
 ```
 
+## Usage
+
+### Bundler (Webpack, Rollup)
+
+```js
+import Vue from 'vue'
+import VueDatoImage from '@voorhoede/vue-dato-image'
+
+Vue.use(VueDatoImage)
+```
+
+### Browser
+
+```html
+<!-- Include after Vue -->
+<!-- Local files -->
+<script src="vue-dato-image/dist/vue-dato-image.js"></script>
+
+<!-- From CDN -->
+<script src="https://unpkg.com/@voorhoede/vue-dato-image"></script>
+```
+
 ## Examples
 
 ### Bitmap image
