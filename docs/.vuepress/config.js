@@ -18,9 +18,9 @@ module.exports = {
                 `https://unpkg.com/${pkg.name}@${pkg.version}/${pkg.unpkg}`
             ],
             onlineBtns: {
-                codepen: true,
-                jsfiddle: true,
-                codesandbox: true
+                codepen: false,
+                jsfiddle: false,
+                codesandbox: false
             },
         }]
     ]
