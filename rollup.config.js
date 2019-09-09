@@ -50,6 +50,7 @@ if (!argv.format || argv.format === 'es') {
       file: pkg.module,
       format: 'esm',
       exports: 'named',
+      sourcemap: true,
     },
     plugins: [
       ...baseConfig.plugins.preVue,
@@ -75,6 +76,7 @@ if (!argv.format || argv.format === 'cjs') {
       format: 'cjs',
       name: 'VueDatoImage',
       exports: 'named',
+      sourcemap: true,
       globals,
     },
     plugins: [
@@ -102,6 +104,7 @@ if (!argv.format || argv.format === 'iife') {
       format: 'iife',
       name: 'VueDatoImage',
       exports: 'named',
+      sourcemap: true,
       globals,
     },
     plugins: [
