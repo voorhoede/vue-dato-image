@@ -4,6 +4,8 @@
 
 ```<vue-dato-image :image={ image } />```
 
+[[toc]]
+
 ## Features
 
 - Works out-of-the-box with [**DatoCMS image file field**](https://www.datocms.com/docs/other/fields/#file-fields).
