@@ -70,6 +70,17 @@ Vue.use(VueDatoImage)
 }"></vue-dato-image>
 :::
 
+### Placeholder color
+
+::: demo
+<vue-dato-image :image="{
+  url: 'https://www.datocms-assets.com/6524/1559739750-quantum-inspire-editor.jpg',
+  width: 1496,
+  height: 932,
+  format: 'jpg'
+}" placeholderColor="#3eaf7c"></vue-dato-image>
+:::
+
 <!-- The API section is auto generated, don't touch please -->
 
 ## API
@@ -80,9 +91,13 @@ Vue.use(VueDatoImage)
 
 - `image` ***Object*** (*required*) 
 
+  Object retreived from Dato image field. It should contain the *url*, *width*, *height* and *format* properties. 
+
 - `width-step` ***Number*** (*optional*) `default: 100` 
 
-- `transparent` ***Boolean*** (*optional*) `default: false` 
+- `placeholder-color` ***String*** (*optional*) `default: 'transparent'` 
+
+  Color filling up the space when the image is loading. 
 
 #### data 
 

@@ -10,7 +10,7 @@
     </template>
     <div v-if="isBitmap" class="vue-dato-image__sizer" :style="`max-width:${image.width}px;`">
       <fixed-ratio
-        :class="{ 'vue-dato-image__canvas--transparent': transparent }"
+        :style="{ backgroundColor: placeholderColor }"
         :width="image.width"
         :height="image.height"
       >
@@ -47,6 +47,9 @@ import imageUrl from './lib/image-url'
 export default {
   components: { FixedRatio, LazyLoad, NoScript },
   props: {
+    /**
+     * Object retreived from Dato image field. It should contain the *url*, *width*, *height* and *format* properties.
+    */
     image: {
       type: Object,
       required: true,
@@ -55,9 +58,12 @@ export default {
       type: Number,
       default: 100,
     },
-    transparent: {
-      type: Boolean,
-      default: false
+    /**
+     * Color filling up the space when the image is loading.
+    */
+    placeholderColor: {
+      type: String,
+      default: 'transparent'
     }
   },
   data() {
