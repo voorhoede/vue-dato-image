@@ -6,6 +6,8 @@
 
 ```<vue-dato-image :image={ image } />```
 
+View source code on [github](https://github.com/voorhoede/vue-dato-image).
+
 [[toc]]
 
 ## Features
