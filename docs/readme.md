@@ -103,8 +103,6 @@ Vue.use(VueDatoImage)
     height: 932,
     format: 'jpg'
   }"
-  placeholderColor="#3eaf7c"
-
 >Interface for Quantum Inspire</vue-dato-image>
 :::
 
