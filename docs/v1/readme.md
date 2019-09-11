@@ -74,6 +74,7 @@ Vue.use(VueDatoImage)
     url: 'https://www.datocms-assets.com/6524/1543322842-heroes.svg',
     alt: null
   }"
+
 ></vue-dato-image>
 :::
 
@@ -88,6 +89,7 @@ Vue.use(VueDatoImage)
     height: 932,
     format: 'jpg'
   }"
+
 ></vue-dato-image>
 :::
 
@@ -101,6 +103,7 @@ Vue.use(VueDatoImage)
     height: 932,
     format: 'jpg'
   }"
+
 >Interface for Quantum Inspire</vue-dato-image>
 :::
 
@@ -117,6 +120,7 @@ Vue.use(VueDatoImage)
     height: 932,
     format: 'jpg'
   }"
+
 ></vue-dato-image>
 :::
 

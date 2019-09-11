@@ -53,8 +53,8 @@
 </template>
 
 <script>
+import LazyLoad from '@voorhoede/vue-lazy-load'
 import FixedRatio from './fixed-ratio.vue'
-import LazyLoad from './lazy-load.vue'
 import NoScript from './no-script.vue'
 import imageUrl from './lib/image-url'
 
