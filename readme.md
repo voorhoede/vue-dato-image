@@ -1,4 +1,4 @@
-# @voorhoede/vue-dato-imag
+# @voorhoede/vue-dato-image
 
 [![npm version](https://img.shields.io/npm/v/@voorhoede/vue-dato-image)](https://www.npmjs.com/package/@voorhoede/vue-dato-image)
 
