@@ -5,7 +5,7 @@
         <img :alt="alt" :src="image.url" class="vue-dato-image__img" v-if="isVector">
       </lazy-load>
       <no-script>
-        <img class="vue-dato-image__img" :alt="alt" :src="imageUrl({ w: 500 })" />
+        <img class="vue-dato-image__img" :alt="alt" :src="imageUrl({ ...parameters, w: 500 })" />
       </no-script>
     </template>
     <div v-if="isBitmap" class="vue-dato-image__sizer" :style="`max-width:${image.width}px;`">
@@ -17,15 +17,15 @@
         <lazy-load>
           <picture class="vue-dato-image__picture" v-if="width">
             <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source type="image/webp" :srcset="imageUrl({ fm: 'webp', w: width })">
-            <source :type="`image/${image.format}`" :srcset="imageUrl({ w: width })">
+            <source type="image/webp" :srcset="imageUrl({ ...parameters, fm: 'webp', w: width })">
+            <source :type="`image/${image.format}`" :srcset="imageUrl({ ...parameters, w: width })">
             <!--[if IE 9]></video><![endif]-->
             <transition name="fade">
               <img
                 class="vue-dato-image__img"
                 v-show="isLoaded"
                 :alt="alt"
-                :src="imageUrl({ w: width })"
+                :src="imageUrl({ ...parameters, w: width })"
                 @load="onLoad"
               />
             </transition>
@@ -33,7 +33,11 @@
         </lazy-load>
         <no-script>
           <picture class="vue-dato-image__picture">
-            <img class="vue-dato-image__img" :alt="alt" :src="imageUrl({ w: 500 })" />
+            <img
+              class="vue-dato-image__img"
+              :alt="alt"
+              :src="imageUrl({ ...parameters, w: 500 })"
+            />
           </picture>
         </no-script>
       </fixed-ratio>
@@ -75,6 +79,13 @@ export default {
     placeholderColor: {
       type: String,
       default: 'transparent',
+    },
+    /**
+     * Additional parameters for image manipulation. ([more info](https://www.datocms.com/docs/static-generators/other-ssg/image-manipulation))
+    */
+    parameters: {
+      type: Object,
+      default: () => {},
     },
   },
   data() {

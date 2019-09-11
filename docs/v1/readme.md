@@ -74,22 +74,20 @@ Vue.use(VueDatoImage)
     url: 'https://www.datocms-assets.com/6524/1543322842-heroes.svg',
     alt: null
   }"
-
 ></vue-dato-image>
 :::
 
 ### Placeholder color
 
 ::: demo
-<vue-dato-image 
+<vue-dato-image
+  placeholderColor="#3eaf7c"
   :image="{
     url: 'https://www.datocms-assets.com/6524/1559739750-quantum-inspire-editor.jpg',
     width: 1496,
     height: 932,
     format: 'jpg'
-  }" 
-  placeholderColor="#3eaf7c"
-
+  }"
 ></vue-dato-image>
 :::
 
@@ -103,8 +101,23 @@ Vue.use(VueDatoImage)
     height: 932,
     format: 'jpg'
   }"
-
 >Interface for Quantum Inspire</vue-dato-image>
+:::
+
+### Additional parameters
+
+::: demo
+<vue-dato-image
+  :parameters="{
+    hue: 100
+  }"
+  :image="{
+    url: 'https://www.datocms-assets.com/6524/1559739750-quantum-inspire-editor.jpg',
+    width: 1496,
+    height: 932,
+    format: 'jpg'
+  }"
+></vue-dato-image>
 :::
 
 <!-- The API section is auto generated, don't touch please -->
@@ -129,3 +142,7 @@ Vue.use(VueDatoImage)
 - `placeholder-color` ***String*** (*optional*) `default: 'transparent'` 
 
   Color filling up the space when the image is loading. 
+
+- `parameters` ***Object*** (*optional*) `default: [object Object]` 
+
+  Additional parameters for image manipulation. ([more info](https://www.datocms.com/docs/static-generators/other-ssg/image-manipulation)) 
