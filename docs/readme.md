@@ -1,5 +1,7 @@
 # vue-dato-image
 
+[![npm version](https://img.shields.io/npm/v/@voorhoede/vue-dato-image)](https://www.npmjs.com/package/@voorhoede/vue-dato-image)
+
 **Fully optimized image component for images from Dato CMS**.
 
 ```<vue-dato-image :image={ image } />```
