@@ -13,12 +13,12 @@ const dimension = { type: Number, required: true }
 export default {
   props: {
     height: dimension,
-    width:  dimension,
+    width: dimension,
   },
   computed: {
     ratio() {
-      return this.height / this.width * 100
-    }
+      return (this.height / this.width) * 100
+    },
   },
 }
 </script>

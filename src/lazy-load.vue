@@ -35,19 +35,20 @@ export default {
     this.unobserve()
   },
   methods: {
-    observe () {
+    observe() {
       const { rootMargin, threshold } = this
       const config = { root: undefined, rootMargin, threshold }
       this.observer = new IntersectionObserver(this.onIntersection, config)
       this.observer.observe(this.$el)
     },
-    onIntersection (entries, observer) {
-      this.isIntersected = entries.some(entry => entry.intersectionRatio > 0)
+    onIntersection(entries) {
+      this.isIntersected = entries.some((entry) => entry.intersectionRatio > 0)
+
       if (this.isIntersected) {
         this.unobserve()
       }
     },
-    unobserve () {
+    unobserve() {
       if ('IntersectionObserver' in window) {
         this.observer.unobserve(this.$el)
       }

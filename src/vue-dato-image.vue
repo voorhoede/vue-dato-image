@@ -21,7 +21,13 @@
             <source :type="`image/${image.format}`" :srcset="imageUrl({ w: width })">
             <!--[if IE 9]></video><![endif]-->
             <transition name="fade">
-              <img class="vue-dato-image__img" v-show="isLoaded" :alt="alt" :src="imageUrl({ w: width })" @load="onLoad"/>
+              <img
+                class="vue-dato-image__img"
+                v-show="isLoaded"
+                :alt="alt"
+                :src="imageUrl({ w: width })"
+                @load="onLoad"
+              />
             </transition>
           </picture>
         </lazy-load>
@@ -52,7 +58,8 @@ export default {
   components: { FixedRatio, LazyLoad, NoScript },
   props: {
     /**
-     * Object retreived from Dato image field. It should contain the *url*, *width*, *height* and *format* properties.
+     * Object retreived from Dato image field.
+     * It should contain the *url*, *width*, *height* and *format* properties.
     */
     image: {
       type: Object,
@@ -67,8 +74,8 @@ export default {
     */
     placeholderColor: {
       type: String,
-      default: 'transparent'
-    }
+      default: 'transparent',
+    },
   },
   data() {
     return {
@@ -79,7 +86,7 @@ export default {
   mounted() {
     const pixelRatio = window.devicePixelRatio || 1
     const cssWidth = this.$el.getBoundingClientRect().width
-    const width = Math.ceil(cssWidth * pixelRatio / this.widthStep) * this.widthStep
+    const width = Math.ceil((cssWidth * pixelRatio) / this.widthStep) * this.widthStep
     this.width = Math.min(width, this.image.width)
   },
   computed: {
@@ -91,7 +98,7 @@ export default {
     },
     alt() {
       return this.image.alt || ''
-    }
+    },
   },
   methods: {
     imageUrl(options) {
@@ -99,8 +106,8 @@ export default {
     },
     onLoad() {
       this.isLoaded = true
-    }
-  }
+    },
+  },
 }
 </script>
 
