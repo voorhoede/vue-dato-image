@@ -6,7 +6,10 @@ module.exports = {
     dest: `www`,
     themeConfig: {
         search: false,
-        navbar: false
+        nav: [
+            { text: 'v1', link: '/' },
+            { text: 'Code', link: 'https://github.com/voorhoede/vue-dato-image' },
+        ]
     },
     plugins: [
         ['@vuepress/register-components', {
