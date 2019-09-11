@@ -27,10 +27,11 @@ const baseConfig = {
       },
     },
     postVue: [
-      buble({ 
+      buble({
         transforms: {
-          dangerousForOf: true
-        }
+          dangerousForOf: true,
+        },
+        objectAssign: true,
       }),
     ],
   },
