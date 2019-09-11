@@ -105,6 +105,7 @@ Vue.use(VueDatoImage)
     height: 932,
     format: 'jpg'
   }"
+
 >Interface for Quantum Inspire</vue-dato-image>
 :::
 
@@ -122,40 +123,11 @@ Vue.use(VueDatoImage)
 
 - `image` ***Object*** (*required*) 
 
-  Object retreived from Dato image field. It should contain the *url*, *width*, *height* and *format* properties. 
+  Object retreived from Dato image field.
+  It should contain the *url*, *width*, *height* and *format* properties. 
 
 - `width-step` ***Number*** (*optional*) `default: 100` 
 
 - `placeholder-color` ***String*** (*optional*) `default: 'transparent'` 
 
   Color filling up the space when the image is loading. 
-
-#### data 
-
-- `width` 
-
-**initial value:** `undefined` 
-
-- `isLoaded` 
-
-**initial value:** `false` 
-
-#### computed properties 
-
-- `isVector` 
-
-   **dependencies:** `image` 
-
-- `isBitmap` 
-
-   **dependencies:** `isVector` 
-
-- `alt` 
-
-   **dependencies:** `image` 
-
-#### methods 
-
-- `imageUrl(options)` 
-
-- `onLoad()` 
