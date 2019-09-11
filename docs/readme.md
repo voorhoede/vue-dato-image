@@ -52,35 +52,60 @@ Vue.use(VueDatoImage)
 ### Bitmap image
 
 ::: demo
-<vue-dato-image :image="{
-  url: 'https://www.datocms-assets.com/6524/1559739750-quantum-inspire-editor.jpg',
-  width: 1496,
-  height: 932,
-  format: 'jpg'
-}"></vue-dato-image>
+<vue-dato-image
+  :image="{
+    url: 'https://www.datocms-assets.com/6524/1559739750-quantum-inspire-editor.jpg',
+    width: 1496,
+    height: 932,
+    format: 'jpg'
+  }"
+
+></vue-dato-image>
 :::
 
 ### Vector image
 
 ::: demo
-<vue-dato-image :image="{
-   width: null,
-   height: null,
-   format: 'svg',
-   url: 'https://www.datocms-assets.com/6524/1543322842-heroes.svg',
-   alt: null
-}"></vue-dato-image>
+<vue-dato-image
+  :image="{
+    width: null,
+    height: null,
+    format: 'svg',
+    url: 'https://www.datocms-assets.com/6524/1543322842-heroes.svg',
+    alt: null
+  }"
+
+></vue-dato-image>
 :::
 
 ### Placeholder color
 
 ::: demo
-<vue-dato-image :image="{
-  url: 'https://www.datocms-assets.com/6524/1559739750-quantum-inspire-editor.jpg',
-  width: 1496,
-  height: 932,
-  format: 'jpg'
-}" placeholderColor="#3eaf7c"></vue-dato-image>
+<vue-dato-image 
+  :image="{
+    url: 'https://www.datocms-assets.com/6524/1559739750-quantum-inspire-editor.jpg',
+    width: 1496,
+    height: 932,
+    format: 'jpg'
+  }" 
+  placeholderColor="#3eaf7c"
+
+></vue-dato-image>
+:::
+
+### With caption
+
+::: demo
+<vue-dato-image 
+  :image="{
+    url: 'https://www.datocms-assets.com/6524/1559739750-quantum-inspire-editor.jpg',
+    width: 1496,
+    height: 932,
+    format: 'jpg'
+  }"
+  placeholderColor="#3eaf7c"
+
+>Interface for Quantum Inspire</vue-dato-image>
 :::
 
 <!-- The API section is auto generated, don't touch please -->
@@ -88,6 +113,10 @@ Vue.use(VueDatoImage)
 ## API
 
 ### vue-dato-image 
+
+#### slots 
+
+- `default` Will be rendered as the *figcaption* tag 
 
 #### props 
 

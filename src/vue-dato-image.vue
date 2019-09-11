@@ -32,8 +32,12 @@
         </no-script>
       </fixed-ratio>
     </div>
-    <figcaption v-if="image.title">
-      {{ image.title }}
+    <figcaption
+      v-if="$slots.default"
+      class="vue-dato-image__caption"
+    >
+      <!-- Will be rendered as the *figcaption* tag -->
+      <slot />
     </figcaption>
   </figure>
 </template>
@@ -133,5 +137,12 @@ export default {
   top: 50%;
   width: 100%;
   text-align: center;
+}
+
+.vue-dato-image__caption {
+  margin-top: .5rem;
+  text-align: center;
+  color: #4c4c4c;
+  font-style: italic;
 }
 </style>
