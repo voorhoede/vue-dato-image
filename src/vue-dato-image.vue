@@ -54,7 +54,7 @@
 
 <script>
 import LazyLoad from '@voorhoede/vue-lazy-load'
-import FixedRatio from './fixed-ratio.vue'
+import FixedRatio from '@voorhoede/vue-fixed-ratio'
 import NoScript from './no-script.vue'
 import imageUrl from './lib/image-url'
 
