@@ -51,6 +51,7 @@ Vue.use(VueDatoImage)
 
 ### Bitmap image
 
+<ClientOnly>
 ::: demo
 <vue-dato-image
   :image="{
@@ -62,9 +63,11 @@ Vue.use(VueDatoImage)
 
 ></vue-dato-image>
 :::
+</ClientOnly>
 
 ### Vector image
 
+<ClientOnly>
 ::: demo
 <vue-dato-image
   :image="{
@@ -77,9 +80,11 @@ Vue.use(VueDatoImage)
 
 ></vue-dato-image>
 :::
+</ClientOnly>
 
 ### Placeholder color
 
+<ClientOnly>
 ::: demo
 <vue-dato-image
   placeholderColor="#3eaf7c"
@@ -92,9 +97,11 @@ Vue.use(VueDatoImage)
 
 ></vue-dato-image>
 :::
+</ClientOnly>
 
 ### With caption
 
+<ClientOnly>
 ::: demo
 <vue-dato-image 
   :image="{
@@ -106,9 +113,11 @@ Vue.use(VueDatoImage)
 
 >Interface for Quantum Inspire</vue-dato-image>
 :::
+</ClientOnly>
 
 ### Additional parameters
 
+<ClientOnly>
 ::: demo
 <vue-dato-image
   :parameters="{
@@ -123,6 +132,7 @@ Vue.use(VueDatoImage)
 
 ></vue-dato-image>
 :::
+</ClientOnly>
 
 <!-- The API section is auto generated, don't touch please -->
 
