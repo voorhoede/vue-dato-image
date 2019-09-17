@@ -28,9 +28,9 @@
     "lint": "eslint 'src/**/*.{js,vue}'"
   },
   "dependencies": {
-    "@voorhoede/vue-fixed-ratio": "^1.0.3",
-    "@voorhoede/vue-lazy-load": "^1.1.1",
-    "query-string": "^6.8.3"
+    "@voorhoede/vue-fixed-ratio": "1.0.5",
+    "@voorhoede/vue-lazy-load": "1.1.2",
+    "query-string": "6.8.3"
   },
   "devDependencies": {
     "@babel/core": "7.6.0",
