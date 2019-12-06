@@ -1,6 +1,6 @@
 {
   "name": "@voorhoede/vue-dato-image",
-  "version": "1.9.5",
+  "version": "1.9.6",
   "description": "Fully optimized image component for images from Dato CMS",
   "main": "dist/vue-dato-image.ssr.js",
   "module": "dist/vue-dato-image.esm.js",
