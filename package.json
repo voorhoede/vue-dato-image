@@ -29,8 +29,8 @@
     "lint": "eslint 'src/**/*.{js,vue}'"
   },
   "dependencies": {
-    "@voorhoede/vue-fixed-ratio": "^1.2.1",
-    "@voorhoede/vue-lazy-load": "^1.2.2",
+    "@voorhoede/vue-fixed-ratio": "^1.2.2",
+    "@voorhoede/vue-lazy-load": "^1.2.3",
     "query-string": "6.8.3",
     "rollup-plugin-css-only": "^1.0.0"
   },

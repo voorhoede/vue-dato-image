@@ -123,8 +123,6 @@ export default {
 }
 </script>
 
-<style src="@voorhoede/vue-lazy-load/dist/vue-lazy-load.css"></style>
-<style src="@voorhoede/vue-fixed-ratio/dist/vue-fixed-ratio.css"></style>
 <style>
 .vue-dato-image__sizer {
   margin-left: auto;
