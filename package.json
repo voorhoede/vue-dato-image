@@ -28,7 +28,7 @@
     "lint": "eslint 'src/**/*.{js,vue}'"
   },
   "dependencies": {
-    "@voorhoede/vue-fixed-ratio": "1.1.3",
+    "@voorhoede/vue-fixed-ratio": "1.2.1",
     "@voorhoede/vue-lazy-load": "1.1.6",
     "query-string": "6.8.3"
   },
