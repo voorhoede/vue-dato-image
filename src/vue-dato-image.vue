@@ -58,6 +58,7 @@ import FixedRatio from '@voorhoede/vue-fixed-ratio'
 import NoScript from './no-script.vue'
 import imageUrl from './lib/image-url'
 
+
 export default {
   components: { FixedRatio, LazyLoad, NoScript },
   props: {
@@ -122,6 +123,8 @@ export default {
 }
 </script>
 
+<style src="@voorhoede/vue-lazy-load/dist/vue-lazy-load.css"></style>
+<style src="@voorhoede/vue-fixed-ratio/dist/vue-fixed-ratio.css"></style>
 <style>
 .vue-dato-image__sizer {
   margin-left: auto;

@@ -5,6 +5,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 import resolve from 'rollup-plugin-node-resolve';
+import css from 'rollup-plugin-css-only';
 import minimist from 'minimist';
 import pkg from './package.json';
 
@@ -31,7 +32,6 @@ const baseConfig = {
         transforms: {
           dangerousForOf: true,
         },
-        objectAssign: true,
       }),
     ],
   },
@@ -61,7 +61,13 @@ if (!argv.format || argv.format === 'es') {
     },
     plugins: [
       ...baseConfig.plugins.preVue,
-      vue(baseConfig.plugins.vue),
+      css({
+        output: pkg.style,
+      }),
+      vue({
+        ...baseConfig.plugins.vue,
+        css: false,
+      }),
       ...baseConfig.plugins.postVue,
       terser({
         output: {
@@ -82,19 +88,23 @@ if (!argv.format || argv.format === 'cjs') {
       compact: true,
       file: pkg.main,
       format: 'cjs',
-      name: 'VueDatoImage',
+      name: 'VueLazyLoad',
       exports: 'named',
       sourcemap: true,
       globals,
     },
     plugins: [
       ...baseConfig.plugins.preVue,
+      css({
+        output: pkg.style,
+      }),
       vue({
         ...baseConfig.plugins.vue,
         template: {
           ...baseConfig.plugins.vue.template,
           optimizeSSR: true,
         },
+        css: false,
       }),
       ...baseConfig.plugins.postVue,
       resolve(),
@@ -111,7 +121,7 @@ if (!argv.format || argv.format === 'iife') {
       compact: true,
       file: pkg.unpkg,
       format: 'iife',
-      name: 'VueDatoImage',
+      name: 'VueLazyLoad',
       exports: 'named',
       sourcemap: true,
       globals,
