@@ -36,6 +36,8 @@ import VueDatoImage from '@voorhoede/vue-dato-image'
 Vue.use(VueDatoImage)
 ```
 
+The CSS file should be imported seperately in the way you desire. It's located at `@voorhoede/vue-dato-image/dist/vue-dato-image.css`.
+
 ### Browser
 
 ```html

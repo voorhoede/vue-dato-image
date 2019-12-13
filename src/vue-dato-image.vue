@@ -58,6 +58,7 @@ import FixedRatio from '@voorhoede/vue-fixed-ratio'
 import NoScript from './no-script.vue'
 import imageUrl from './lib/image-url'
 
+
 export default {
   components: { FixedRatio, LazyLoad, NoScript },
   props: {
