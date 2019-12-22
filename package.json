@@ -32,7 +32,7 @@
     "@voorhoede/vue-fixed-ratio": "^1.2.2",
     "@voorhoede/vue-lazy-load": "^1.2.3",
     "query-string": "6.9.0",
-    "rollup-plugin-css-only": "^1.0.0"
+    "rollup-plugin-css-only": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.7.5",
