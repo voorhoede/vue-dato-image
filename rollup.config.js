@@ -37,17 +37,6 @@ const baseConfig = {
   },
 };
 
-// UMD/IIFE shared settings: externals and output.globals
-// Refer to https://rollupjs.org/guide/en#output-globals for details
-const external = [
-  // list external dependencies, exactly the way it is written in the import statement.
-  // eg. 'jquery'
-];
-const globals = {
-  // Provide global variable names to replace your external imports
-  // eg. jquery: '$'
-};
-
 // Customize configs for individual targets
 const buildFormats = [];
 if (!argv.format || argv.format === 'es') {
@@ -83,7 +72,6 @@ if (!argv.format || argv.format === 'es') {
 if (!argv.format || argv.format === 'cjs') {
   const umdConfig = {
     ...baseConfig,
-    external,
     output: {
       compact: true,
       file: pkg.main,
@@ -91,7 +79,6 @@ if (!argv.format || argv.format === 'cjs') {
       name: 'VueLazyLoad',
       exports: 'named',
       sourcemap: true,
-      globals,
     },
     plugins: [
       ...baseConfig.plugins.preVue,
@@ -116,7 +103,6 @@ if (!argv.format || argv.format === 'cjs') {
 if (!argv.format || argv.format === 'iife') {
   const unpkgConfig = {
     ...baseConfig,
-    external,
     output: {
       compact: true,
       file: pkg.unpkg,
@@ -124,7 +110,6 @@ if (!argv.format || argv.format === 'iife') {
       name: 'VueLazyLoad',
       exports: 'named',
       sourcemap: true,
-      globals,
     },
     plugins: [
       ...baseConfig.plugins.preVue,
