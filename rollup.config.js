@@ -14,6 +14,9 @@ const argv = minimist(process.argv.slice(2));
 const baseConfig = {
   input: 'src/index.js',
   external: ['query-string'],
+  output: {
+    globals: { 'query-string': 'queryString' },
+  },
   plugins: {
     preVue: [
       replace({
@@ -43,6 +46,7 @@ if (!argv.format || argv.format === 'es') {
   const esConfig = {
     ...baseConfig,
     output: {
+      ...baseConfig.output,
       file: pkg.module,
       format: 'esm',
       exports: 'named',
@@ -73,6 +77,7 @@ if (!argv.format || argv.format === 'cjs') {
   const umdConfig = {
     ...baseConfig,
     output: {
+      ...baseConfig.output,
       compact: true,
       file: pkg.main,
       format: 'cjs',
@@ -104,6 +109,7 @@ if (!argv.format || argv.format === 'iife') {
   const unpkgConfig = {
     ...baseConfig,
     output: {
+      ...baseConfig.output,
       compact: true,
       file: pkg.unpkg,
       format: 'iife',
