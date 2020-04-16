@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@voorhoede/vue-fixed-ratio": "^1.2.2",
-    "@voorhoede/vue-lazy-load": "^1.2.3",
+    "@voorhoede/vue-lazy-load": "^1.2.7",
     "query-string": "6.12.1",
     "rollup-plugin-css-only": "^2.0.0"
   },
