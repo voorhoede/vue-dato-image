@@ -13,9 +13,9 @@ const defaults = {
 /**
  * Format image URL
  *
- * @param {string} imagePath    - Image base url. Must end with with `?`.
+ * @param {string} imagePath    - Image base url without query string (no ?param=...).
  * @param {Object} [params]     - Imgix manipulation parameters, see https://docs.imgix.com/apis/url
  */
-const imageUrl = (imagePath, params) => `${imagePath}?${stringify(Object.assign(defaults, params))}`
+const imageUrl = (imagePath, params) => `${imagePath}?${stringify(Object.assign({}, defaults, params))}`
 
 export default imageUrl

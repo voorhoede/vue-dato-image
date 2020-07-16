@@ -20,6 +20,7 @@ module.exports = {
     'vue',
   ],
   rules: {
-    semi: 'off'
+    'prefer-object-spread': 'off',
+    semi: 'off',
   },
 };
