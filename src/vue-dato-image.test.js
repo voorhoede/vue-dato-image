@@ -28,7 +28,7 @@ test('Renders picture element when image is bitmap', () => {
     },
   })
 
-  expect(wrapper.find('picture').isVisible()).toBe(true)
+  expect(wrapper.find('picture').element).toBeVisible()
 })
 
 test('Renders img element when image is vector', () => {
@@ -44,5 +44,5 @@ test('Renders img element when image is vector', () => {
     },
   })
 
-  expect(wrapper.find('img').isVisible()).toBe(true)
+  expect(wrapper.find('img').element).toBeVisible()
 })
