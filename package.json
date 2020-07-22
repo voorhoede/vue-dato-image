@@ -63,6 +63,6 @@
     "vue-jest": "3.0.6",
     "vue-template-compiler": "2.6.11",
     "vuepress": "1.5.2",
-    "vuepress-plugin-demo-code": "0.5.0"
+    "vuepress-plugin-demo-code": "0.5.2"
   }
 }
